@@ -25,6 +25,8 @@
   /* фирменный серый GUDOVA GROUP (из логотипа) */
   --brand-grey:#585656;
   --brand-grey-2:#6E6E6E;
+  /* тот же фирменный серый, затемнённый — на нём оранжевый читается */
+  --footer-bg:#333131;
 
   --line:rgba(28,28,28,.14);
   --line-strong:rgba(28,28,28,.24);
@@ -448,8 +450,8 @@ section{padding:104px 0;position:relative;}
    ========================================================= */
 /* Подвал — фирменный серый GUDOVA GROUP. Текст здесь светлый, поэтому
    все цвета заданы явно, а не через чернильные переменные. */
-.site-footer{background:var(--brand-grey);color:#DCDCDC;padding:56px 0 30px;font-size:13px;border-top:none;}
-.footer-top{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,.18);margin-bottom:24px;}
+.site-footer{background:var(--footer-bg);color:#DCDCDC;padding:56px 0 30px;font-size:13px;border-top:none;}
+.footer-top{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,.16);margin-bottom:24px;}
 .footer-brand .logo-mark{margin-bottom:12px;color:#FFFFFF;}
 .footer-brand .logo-mark .g2{color:var(--accent-light);}
 .footer-brand p{max-width:320px;color:#CFCFCF;font-size:13.5px;}
