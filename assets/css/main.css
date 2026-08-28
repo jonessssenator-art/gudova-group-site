@@ -535,8 +535,9 @@ section{padding:104px 0;position:relative;}
   .mobile-menu .mm-contact a{padding:11px 0;}
   .cta-fallback{gap:4px;}
   .cta-fallback a{padding:11px 0;}
-  .form-consent input{width:22px;height:22px;margin-top:0;}
-  .form-consent label{padding:4px 0;font-size:12.5px;line-height:1.45;}
+  .form-consent{align-items:center;}
+  .form-consent input{width:24px;height:24px;margin-top:0;flex:none;}
+  .form-consent label{padding:10px 0;font-size:12.5px;line-height:1.45;}
 }
 @media (max-width:560px){
   .wrap{padding:0 20px;}
@@ -551,4 +552,12 @@ section{padding:104px 0;position:relative;}
   .nav{padding:14px 18px;}
   .logo-mark{font-size:15px;}
   .nav-cta{padding:10px 14px;font-size:11.5px;}
+}
+/* Логотип + кнопка + бургер перестают помещаться в строку: бургер
+   уезжал за правый край и меню было не открыть. Кнопку убираем —
+   внизу постоянно висит панель «Позвонить / WhatsApp», а «Обсудить
+   объект» остаётся в самом меню. */
+@media (max-width:400px){
+  .nav-cta{display:none;}
+  .nav{padding:14px 16px;}
 }
