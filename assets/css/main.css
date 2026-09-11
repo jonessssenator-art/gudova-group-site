@@ -696,6 +696,25 @@ section{border-bottom:1px solid var(--line);}
 }
 
 /* Три этапа из флаера — в один горизонтальный ряд. */
+.service-catalog{background:var(--paper);}
+.catalog-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;border-top:4px solid var(--accent);padding-top:24px;}
+.catalog-card{min-width:0;display:flex;flex-direction:column;align-items:flex-start;padding:30px;border:1px solid var(--line);border-radius:0 12px 12px 12px;background:#fff;}
+.catalog-card:nth-child(2),.catalog-card:nth-child(3){background:#fff3e3;}
+.catalog-heading{display:flex;align-items:baseline;gap:18px;margin-bottom:24px;}
+.catalog-heading>span{color:var(--accent-deep);font-size:24px;font-weight:700;flex:none;}
+.catalog-heading h3{font-size:22px;line-height:1.25;overflow-wrap:anywhere;}
+.catalog-card .stage-list{margin-bottom:28px;}
+.catalog-card .stage-list li{font-size:16px;}
+.catalog-card .btn{margin-top:auto;}
+.catalog-card--wide{grid-column:1/-1;}
+.catalog-card--wide .stage-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 36px;}
+@media(max-width:760px){
+  .catalog-grid{grid-template-columns:1fr;gap:16px;}
+  .catalog-card{padding:24px 20px;}
+  .catalog-heading{gap:12px;}
+  .catalog-heading h3{font-size:20px;}
+  .catalog-card--wide .stage-list{grid-template-columns:1fr;}
+}
 .stages-heading{max-width:none;border-bottom:4px solid var(--accent);padding-bottom:26px;margin-bottom:24px;}
 .stages-heading .eyebrow{font-size:22px;font-weight:400;letter-spacing:.04em;color:var(--accent-deep);margin-bottom:8px;}
 .stages-heading h2{text-transform:uppercase;}
