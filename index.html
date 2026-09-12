@@ -23,7 +23,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/main.css?v=34">
+<link rel="stylesheet" href="assets/css/main.css?v=35">
 
 <script type="application/ld+json">
 {
@@ -194,36 +194,55 @@
       <h2>От задачи к результату</h2>
     </div>
     <div class="stages-grid">
-      <article class="stage-card">
+<article class="stage-card">
         <div class="stage-number">01</div>
         <div class="stage-content">
           <h3>Предпроектные работы</h3>
-          <ul class="stage-list">
+          <p class="stage-summary">Анализ проекта, техническое задание и исходно-разрешительная документация.</p>
+          <button class="stage-toggle" id="stage-toggle-1" aria-expanded="false" aria-controls="stage-details-1" hidden>Подробнее <span aria-hidden="true">+</span></button>
+        </div>
+      </article>
+<article class="stage-card">
+        <div class="stage-number">02</div>
+        <div class="stage-content">
+          <h3>Проектирование</h3>
+          <p class="stage-summary">Контроль проектной документации, согласования и сопровождение экспертизы.</p>
+          <button class="stage-toggle" id="stage-toggle-2" aria-expanded="false" aria-controls="stage-details-2" hidden>Подробнее <span aria-hidden="true">+</span></button>
+        </div>
+      </article>
+<article class="stage-card">
+        <div class="stage-number">03</div>
+        <div class="stage-content">
+          <h3>Строительство</h3>
+          <p class="stage-summary">Подготовка площадки, строительный контроль и ввод объекта в эксплуатацию.</p>
+          <button class="stage-toggle" id="stage-toggle-3" aria-expanded="false" aria-controls="stage-details-3" hidden>Подробнее <span aria-hidden="true">+</span></button>
+        </div>
+      </article>
+    </div>
+<div class="stage-details" id="stage-details-1" role="region" aria-labelledby="stage-title-1">
+      <h3 id="stage-title-1">01 / Предпроектные работы</h3>
+      <ul class="stage-list">
             <li>Предпроектный анализ</li>
             <li>Предпроектные работы</li>
             <li>Разработка технического задания на проектирование</li>
             <li>Подготовка пакета исходно-разрешительной документации (ИРД)</li>
           </ul>
-        </div>
-      </article>
-      <article class="stage-card">
-        <div class="stage-number">02</div>
-        <div class="stage-content">
-          <h3>Проектирование</h3>
-          <ul class="stage-list">
+      <button class="stage-close" data-stage-close="1" hidden>Свернуть подробности</button>
+    </div>
+<div class="stage-details" id="stage-details-2" role="region" aria-labelledby="stage-title-2">
+      <h3 id="stage-title-2">02 / Проектирование</h3>
+      <ul class="stage-list">
             <li>Подготовительный этап</li>
             <li>Контроль разработки проектной документации</li>
             <li>Согласование проектной документации</li>
             <li>Сопровождение экспертизы проектной документации</li>
             <li>Аудит и оптимизация проектной документации в случае привлечения технического заказчика после проектирования</li>
           </ul>
-        </div>
-      </article>
-      <article class="stage-card">
-        <div class="stage-number">03</div>
-        <div class="stage-content">
-          <h3>Строительство</h3>
-          <div class="construction-stages">
+      <button class="stage-close" data-stage-close="2" hidden>Свернуть подробности</button>
+    </div>
+<div class="stage-details" id="stage-details-3" role="region" aria-labelledby="stage-title-3">
+      <h3 id="stage-title-3">03 / Строительство</h3>
+      <div class="construction-stages">
             <div>
               <h4>Подготовительный этап</h4>
               <ul class="stage-list">
@@ -255,8 +274,7 @@
               </ul>
             </div>
           </div>
-        </div>
-      </article>
+      <button class="stage-close" data-stage-close="3" hidden>Свернуть подробности</button>
     </div>
   </div>
 </section>
@@ -658,7 +676,7 @@
 </div>
 
 <script src="assets/js/content.js?v=11"></script>
-<script src="assets/js/app.js?v=11" defer></script>
+<script src="assets/js/app.js?v=12" defer></script>
 <script src="assets/js/form.js?v=13" defer></script>
 
 </body>

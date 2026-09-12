@@ -208,7 +208,41 @@
     });
   }
 
+  function initStageDetails() {
+    var buttons = Array.from(document.querySelectorAll('.stage-toggle'));
+    if (!buttons.length) return;
+    function collapseAll() {
+      buttons.forEach(function (button) {
+        button.setAttribute('aria-expanded', 'false');
+        button.innerHTML = 'Подробнее <span aria-hidden="true">+</span>';
+        document.getElementById(button.getAttribute('aria-controls')).hidden = true;
+      });
+    }
+    collapseAll();
+    buttons.forEach(function (button) {
+      button.hidden = false;
+      button.addEventListener('click', function () {
+        var wasOpen = button.getAttribute('aria-expanded') === 'true';
+        collapseAll();
+        if (!wasOpen) {
+          button.setAttribute('aria-expanded', 'true');
+          button.innerHTML = 'Свернуть <span aria-hidden="true">−</span>';
+          document.getElementById(button.getAttribute('aria-controls')).hidden = false;
+        }
+      });
+    });
+    document.querySelectorAll('[data-stage-close]').forEach(function (close) {
+      close.hidden = false;
+      close.addEventListener('click', function () {
+        var trigger = document.getElementById('stage-toggle-' + close.dataset.stageClose);
+        collapseAll();
+        trigger.focus();
+      });
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
+    initStageDetails();
     initHeaderScroll();
     initActiveNav();
     initMobileMenu();
