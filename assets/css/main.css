@@ -32,10 +32,10 @@
   --line-strong:rgba(28,28,28,.24);
   --danger:#C9583F;
 
-  /* Единый строгий шрифт на весь сайт — Montserrat.
+  /* Единый строгий шрифт на весь сайт — Manrope.
      Три переменные оставлены как алиасы, чтобы не переписывать
      каждое правило: все они ведут на один и тот же шрифт. */
-  --font:'Montserrat',Arial,Helvetica,sans-serif;
+  --font:'Manrope',Arial,Helvetica,sans-serif;
   --font-serif:var(--font);
   --font-sans:var(--font);
   --font-mono:var(--font);
@@ -622,7 +622,7 @@ h1,h2,h3,h4{font-weight:800;letter-spacing:-.035em;}
 .eyebrow{font-weight:700;letter-spacing:.16em;font-size:12px;}
 .eyebrow::before{display:none;}
 .hero{padding-top:160px;padding-bottom:0;overflow:hidden;}
-.hero-copy h1{font-size:clamp(36px,5.5vw,76px);font-weight:900;line-height:1.04;letter-spacing:-.055em;max-width:1230px;}
+.hero-copy h1{font-size:clamp(36px,5.5vw,76px);font-weight:800;line-height:1.08;letter-spacing:-.04em;max-width:1230px;}
 .hero-copy h1 .accent{color:var(--accent);}
 .hero-copy .lede{font-size:17px;line-height:1.5;max-width:850px;margin-top:32px;}
 .hero-copy .audience{font-size:14px;max-width:850px;margin-bottom:26px;}
