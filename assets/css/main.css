@@ -627,15 +627,8 @@ h1,h2,h3,h4{font-weight:800;letter-spacing:-.035em;}
 .hero-copy .lede{font-size:17px;line-height:1.5;max-width:850px;margin-top:32px;}
 .hero-copy .audience{font-size:14px;max-width:850px;margin-bottom:26px;}
 .hero-micro{font-size:12px;}
-.hero-brand{display:flex;align-items:center;justify-content:flex-end;gap:0;max-width:1360px;height:300px;margin:20px auto 0;padding:0 32px;overflow:hidden;}
-.hero-brand img{height:auto;flex:none;margin-left:-13%;transform:scaleY(.72);}
-.hero-brand img:first-child{margin-left:0;}
-.hero-brand img:nth-child(1){width:14%;opacity:.12;}
-.hero-brand img:nth-child(2){width:18%;opacity:.24;}
-.hero-brand img:nth-child(3){width:23%;opacity:.4;}
-.hero-brand img:nth-child(4){width:29%;opacity:.6;}
-.hero-brand img:nth-child(5){width:36%;opacity:.8;}
-.hero-brand img:nth-child(6){width:45%;}
+.hero-brand{max-width:1360px;aspect-ratio:1320/475;margin:20px auto 0;overflow:hidden;}
+.hero-brand img{display:block;width:100%;height:auto;}
 section{border-bottom:1px solid var(--line);}
 .section-head{max-width:1050px;margin-bottom:40px;}
 .section-head h2{font-size:clamp(28px,3.5vw,46px);font-weight:800;}
@@ -679,7 +672,7 @@ section{border-bottom:1px solid var(--line);}
 @media(max-width:760px){
   .hero{padding-top:125px;}
   .hero-copy h1{font-size:clamp(34px,7vw,52px);}
-  .hero-brand{height:170px;margin-top:12px;padding:0 20px;}
+  .hero-brand{margin-top:12px;}
   .svc-card{padding:24px 20px 24px 82px;}
   .svc-card .se-num{width:60px;font-size:21px;}
   .svc-card h3{font-size:19px;}
@@ -691,7 +684,6 @@ section{border-bottom:1px solid var(--line);}
 }
 @media(max-width:420px){
   .hero-copy h1{font-size:33px;}
-  .hero-brand{height:130px;}
   .site-header .logo-mark{font-size:13px;gap:4px;}
   .logo-mark img{width:30px;height:22px;margin-right:2px;}
 }
