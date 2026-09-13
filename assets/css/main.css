@@ -627,7 +627,7 @@ h1,h2,h3,h4{font-weight:800;letter-spacing:-.035em;}
 .hero-copy .lede{font-size:17px;line-height:1.5;max-width:850px;margin-top:32px;}
 .hero-copy .audience{font-size:14px;max-width:850px;margin-bottom:26px;}
 .hero-micro{font-size:12px;}
-.hero-brand{max-width:1360px;aspect-ratio:1320/475;margin:20px auto 0;overflow:hidden;}
+.hero-brand{max-width:1360px;aspect-ratio:2089/753;margin:20px auto 0;overflow:hidden;}
 .hero-brand img{display:block;width:100%;height:auto;}
 section{border-bottom:1px solid var(--line);}
 .section-head{max-width:1050px;margin-bottom:40px;}
