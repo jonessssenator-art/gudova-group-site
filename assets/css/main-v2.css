@@ -402,7 +402,7 @@ section{padding:104px 0;position:relative;}
 /* Сканы показываем сразу, а не прячем за кликом: документ, который
    видно, работает как доказательство. Клик по-прежнему открывает
    полный лист в лайтбоксе. */
-.certs-row{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.certs-row{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
 .cert-item{
   text-align:left;padding:0;border:1px solid var(--line);border-radius:var(--radius-m);
   background:var(--paper-3);overflow:hidden;
