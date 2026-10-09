@@ -68,3 +68,4 @@ html{scroll-padding-top:24px}section,.service-detail,.phase,.proj-panel,.documen
 .founder-quote p+p{margin-top:.8em}
 .footer-tagline{white-space:nowrap;max-width:none}
 @media(max-width:760px){.footer-tagline{font-size:min(15px,3vw)}}
+.lede-sep{display:inline-block;width:.42em;height:.42em;background:#f28c28;transform:rotate(45deg);margin:0 .85em;vertical-align:.12em}
