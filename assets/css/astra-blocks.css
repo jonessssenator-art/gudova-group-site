@@ -1,0 +1,6 @@
+/* Барабанный счётчик цифр по мотивам Astra */
+.roll{display:inline-flex;vertical-align:bottom;white-space:nowrap}
+.roll-digit{display:inline-block;height:1.2em;line-height:1.2;overflow:hidden;-webkit-mask-image:linear-gradient(transparent,#000 28%,#000 72%,transparent);mask-image:linear-gradient(transparent,#000 28%,#000 72%,transparent)}
+.roll-strip{display:block;transform:translateY(0);transition:transform 1.1s cubic-bezier(.22,1,.28,1)}
+.roll-strip span{display:block;height:1.2em;line-height:1.2;text-align:center}
+@media(prefers-reduced-motion:reduce){.roll-strip{transition:none}}
