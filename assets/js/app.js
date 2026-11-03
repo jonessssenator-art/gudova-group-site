@@ -94,11 +94,11 @@
       if (lastFocused) lastFocused.focus();
     }
 
-    // menu-toggle is hidden above 920px (full nav shows instead) — if the
+    // menu-toggle is hidden above 700px (full nav shows instead) — if the
     // viewport crosses that while the menu is open (rotate, resize a split
     // window), the close button disappears with the menu still covering
     // the screen and no way out except Escape
-    var desktopQuery = window.matchMedia('(min-width:921px)');
+    var desktopQuery = window.matchMedia('(min-width:701px)');
     var onBreakpointChange = function (e) {
       if (e.matches && menu.classList.contains('is-open')) close();
     };
