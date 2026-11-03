@@ -112,3 +112,5 @@ html{scroll-padding-top:24px}section,.service-detail,.phase,.proj-panel,.documen
 }
 
 @media(max-width:700px){.form-nav{flex-wrap:wrap;gap:12px}.form-nav .btn{white-space:normal;max-width:100%}.form-step[data-step="4"] .form-nav{flex-direction:column-reverse;align-items:stretch}.form-step[data-step="4"] .form-nav .btn{width:100%}}
+
+#contacts[data-contact-style=dark] .btn-outline-dark{color:#eee9df;border-color:#eee9df60}
