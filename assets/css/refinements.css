@@ -78,3 +78,5 @@ body:has(.lightbox.is-open) .mobile-bar,body:has(.lightbox.is-open) .back-to-top
 .hero-link{width:fit-content}
 @media(max-width:700px){.reference-header .nav-phone{display:none}}
 @media(prefers-reduced-motion:reduce){.mobile-menu,.lightbox{transition:none}}
+/* Keep the logo in its own paint layer inside the sticky header on mobile WebKit. */
+@media(max-width:700px){.reference-header .logo-mark{position:relative;z-index:1;transform:translateZ(0)}}
