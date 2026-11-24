@@ -27,3 +27,10 @@
 #about[data-founder-style=portrait] .founder-quote{border-left:0;border-top:2px solid var(--accent);padding:20px 0 0}
 @media(max-width:1000px){#about .founder-layout{width:calc(100% - 48px)}#about[data-founder-style=classic] .founder-layout{grid-template-columns:280px minmax(0,1fr);gap:32px}#about[data-founder-style=card] .founder-layout{grid-template-columns:300px minmax(0,1fr)}#about[data-founder-style=card] .founder-copy{padding:28px}#about[data-founder-style=portrait] .founder-layout{grid-template-columns:minmax(0,1fr) 300px;gap:32px}}
 @media(max-width:760px){#about .founder-layout{width:calc(100% - 40px)}#about[data-founder-style] .founder-layout{grid-template-columns:1fr;gap:30px}#about[data-founder-style=card] .founder-layout{gap:0}#about[data-founder-style=portrait] .founder-visual,#about[data-founder-style=portrait] .founder-copy{grid-column:auto;grid-row:auto}#about .founder-visual{max-width:380px;width:100%;margin-inline:auto}#about .founder-copy .founder-name{font-size:30px}#about[data-founder-style=card] .founder-visual{max-width:none}#about[data-founder-style=card] .founder-copy{padding:28px 24px}.founder-options{gap:6px;padding-inline:16px}.founder-options button{font-size:10px;padding:9px 12px}}
+
+/* Keep the biography and portrait compact; give the quote a shared row. */
+#about[data-founder-style=card] .founder-layout{align-items:start}
+#about[data-founder-style=card] .founder-visual{align-self:stretch}
+#about[data-founder-style=card] .founder-copy .founder-cred{margin-top:24px;padding-top:0}
+#about[data-founder-style=card] .founder-layout>.founder-quote{grid-column:1/-1;max-width:none;width:100%;margin:0;padding:24px 40px 32px;border-left:0;border-top:1px solid var(--border);background:var(--surface);font-size:16px;line-height:1.65}
+@media(max-width:760px){#about[data-founder-style=card] .founder-layout>.founder-quote{padding:24px}}
