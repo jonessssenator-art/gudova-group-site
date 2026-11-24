@@ -12,6 +12,6 @@ window.GUDOVA_CONTENT = {
     phoneDisplay: '+7 (989) 665 07 07',
     whatsapp: '79896650707',
     email: 'gudova.group@mail.ru',
-    address: 'РД, г. Махачкала, ул. Радищева, 4'
+    address: 'Республика Дагестан, город Махачкала, улица Радищева, 4'
   }
 };
