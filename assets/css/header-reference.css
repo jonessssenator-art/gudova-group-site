@@ -64,7 +64,8 @@ html{scroll-padding-top:24px}section,.service-detail,.phase,.proj-panel,.documen
 .hero-copy .lede{white-space:nowrap;max-width:none}
 @media(max-width:760px){.hero-copy .lede{font-size:min(16px,2.75vw)}}
 @media(max-width:760px){.hero-copy .lede.lede-free{font-size:16px;white-space:normal}}
-@media(min-width:1151px){.timeline{grid-template-columns:repeat(5,minmax(0,1fr))}}
+@media(min-width:1151px){#cooperation .timeline{grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}#cooperation .tl-step{padding:24px 20px;gap:20px}#cooperation .tl-step .tl-title{font-size:20px}}
+@media(min-width:601px) and (max-width:1150px){#cooperation .tl-step:last-child{grid-column:1/-1}}
 .founder-quote p+p{margin-top:.8em}
 .footer-tagline{white-space:nowrap;max-width:none}
 @media(max-width:760px){.footer-tagline{font-size:min(15px,3vw)}}
