@@ -39,11 +39,11 @@
     });
   }
 
-  function showStep(i) {
+  function showStep(i, focus = true) {
     steps.forEach(function (s, idx) { s.classList.toggle('is-active', idx === i); });
     updateProgress();
     var firstField = steps[i].querySelector('input, textarea, select, button.option-chip');
-    if (firstField) firstField.focus({ preventScroll: true });
+    if (focus && firstField) { firstField.focus({ preventScroll: true }); steps[i].scrollIntoView({block:'start',behavior:'auto'}); }
   }
 
   function fieldGroups(stepEl) {
@@ -63,10 +63,12 @@
     } else if (input) {
       valid = input.hasAttribute('data-optional') || input.value.trim().length > 0;
       if (input.type === 'email' && input.value.trim() && !/^\S+@\S+\.\S+$/.test(input.value.trim())) valid = false;
-      if (input.type === 'tel' && input.value.trim() && !/^[+0-9()\-\s]{7,20}$/.test(input.value.trim())) valid = false;
+      if (input.type === 'tel') { var digits = input.value.replace(/\D/g, ''); valid = /^[+0-9()\-\s]+$/.test(input.value.trim()) && digits.length >= 7 && digits.length <= 15; }
       answers[key] = input.value.trim();
     }
     group.classList.toggle('has-error', !valid);
+    if (input) input.setAttribute('aria-invalid', String(!valid));
+    if (chips.length) group.querySelector('.option-grid').setAttribute('aria-invalid', String(!valid));
     return valid;
   }
 
@@ -128,14 +130,16 @@
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     if (!validateStep(steps[current])) return;
+    if (current < steps.length - 1) { current++; showStep(current); return; }
 
     var consent = form.querySelector('#f-consent');
     if (consent && !consent.checked) {
       consent.closest('.form-consent').classList.add('has-error');
+      consent.setAttribute('aria-invalid', 'true');
       consent.focus();
       return;
     }
-    if (consent) consent.closest('.form-consent').classList.remove('has-error');
+    if (consent) { consent.closest('.form-consent').classList.remove('has-error'); consent.setAttribute('aria-invalid', 'false'); }
 
     var lines = [
       'Заявка с сайта GUDOVA GROUP',
@@ -157,10 +161,10 @@
 
     steps.forEach(function (s) { s.classList.remove('is-active'); });
     formCard.querySelector('.form-progress').style.display = 'none';
-    if (success) success.classList.add('is-active');
+    if (success) { success.classList.add('is-active'); success.querySelector('.form-whatsapp-retry').href = waUrl; success.focus(); }
 
     window.open(waUrl, '_blank', 'noopener');
   });
 
-  showStep(0);
+  showStep(0, false);
 })();

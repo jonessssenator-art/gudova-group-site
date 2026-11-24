@@ -108,7 +108,7 @@
     function onKeydown(e) {
       if (e.key === 'Escape') { close(); return; }
       if (e.key === 'Tab') {
-        var focusables = focusablesIn(menu);
+        var focusables = [toggle].concat(focusablesIn(menu));
         if (!focusables.length) return;
         var first = focusables[0];
         var last = focusables[focusables.length - 1];
@@ -190,7 +190,7 @@
       if (e.key === 'ArrowRight') show(index + 1);
       if (e.key === 'ArrowLeft') show(index - 1);
       if (e.key === 'Tab') {
-        var focusables = [closeBtn, prevBtn, nextBtn].filter(Boolean);
+        var focusables = [closeBtn, prevBtn, nextBtn].filter(function (el) { return el && !el.hidden; });
         var first = focusables[0], last = focusables[focusables.length - 1];
         if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
         else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }

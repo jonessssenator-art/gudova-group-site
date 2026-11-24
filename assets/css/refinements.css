@@ -1,0 +1,80 @@
+/* Astra Button (press feedback, 48px target) and Bouncy Accordion (trigger/body separation), adapted to static HTML.
+   Sources: https://astra-ui.com/animations/button and /animations/bouncy-accordion. */
+:root{--control-radius:12px;--control-height:48px;--feedback-duration:150ms}
+:is(button,a,summary,input,textarea):focus-visible{outline:3px solid #a35139;outline-offset:4px}
+html[data-variant=navy] :is(button,a,summary,input,textarea):focus-visible{outline-color:#ffb162}
+.btn,.header-tender,.header-callback,.mobile-bar a,.option-chip{min-height:var(--control-height);transition:background var(--feedback-duration),color var(--feedback-duration),transform var(--feedback-duration);touch-action:manipulation}
+.btn,.option-chip{border-radius:var(--control-radius)}
+.header-callback{background:#a94f3c}
+.btn:active,.header-tender:active,.header-callback:active,.mobile-bar a:active,.option-chip:active{transform:scale(.97)}
+.reference-actions .theme-switch button{width:44px;height:44px}
+.media-toolbar button{width:48px;height:48px;flex:none;border:1px solid var(--border);background:var(--card);color:var(--fg)}
+.media-toolbar button:disabled{opacity:.4;cursor:default}
+.pp-count{border-radius:999px!important;font-family:var(--font-sans)!important;font-size:13px!important;line-height:1.4;padding:8px 14px!important;background:#1b2632ed!important;color:#fff!important}
+.service-detail summary,.phase-disclosure summary{min-height:54px;display:flex;align-items:center;justify-content:space-between;gap:16px;list-style:none;cursor:pointer}
+.service-detail summary::-webkit-details-marker,.phase-disclosure summary::-webkit-details-marker{display:none}
+.service-detail .scope-toggle,.phase .scope-toggle{width:28px;height:28px;flex:none;display:grid;place-items:center;border:1px solid var(--border);border-radius:50%;font-size:20px;color:var(--accent);transition:transform var(--feedback-duration)}
+.service-detail details[open] .scope-toggle,.phase details[open] .scope-toggle{transform:rotate(45deg)}
+.phase-disclosure summary h3{margin:0}
+.phase-disclosure[open]>ul{margin-top:24px}
+.service-detail details:not([open]) summary{margin-bottom:0}
+.form-step-status{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+.form-step{scroll-margin-top:110px}
+.field-error{font-size:14px!important;line-height:1.5}
+#contacts .field-error{color:#ffbfaa}
+.form-whatsapp-retry{margin-top:20px}
+.lightbox .lb-nav[hidden]{display:none}
+.lightbox{display:grid;grid-template-rows:minmax(0,1fr) auto;gap:18px;padding:76px 72px 28px}
+.lightbox img{max-width:100%;max-height:100%;width:auto;height:auto;justify-self:center;align-self:center;min-height:0;object-fit:contain}
+.lightbox .lb-caption{position:static;max-width:760px;margin:0 auto;color:#eee9df;line-height:1.5;font-family:var(--font-sans);font-size:14px;overflow-wrap:anywhere}
+.lightbox .lb-close{top:max(16px,env(safe-area-inset-top));right:16px;width:48px;height:48px}
+.lightbox .lb-counter{top:28px;color:#eee9df}
+body:has(.lightbox.is-open) .mobile-bar,body:has(.lightbox.is-open) .back-to-top,body:has(.mobile-menu.is-open) .mobile-bar,body:has(.mobile-menu.is-open) .back-to-top{visibility:hidden;pointer-events:none}
+@media(min-width:761px){.phase-disclosure .scope-toggle{display:none}.phase-disclosure summary{cursor:pointer}.service-details-grid{align-items:start}}
+@media(max-width:1100px) and (min-width:701px){.reference-actions{gap:10px}.reference-top{gap:16px}.reference-header .nav-phone{font-size:13px}.reference-wordmark{font-size:12px}}
+@media(max-width:760px){
+  section{padding-block:48px}.section-head{margin-bottom:24px}.section-head h2{font-size:clamp(27px,6vw,34px);line-height:1.2}
+  .service-details-grid{gap:12px}.service-detail{padding:16px 20px}.service-detail h3{font-size:19px;line-height:1.35}.service-detail details[open]>ul{margin-top:16px}.service-detail li,.phase-body li{font-size:16px;line-height:1.6}
+  .phase{grid-template-columns:44px minmax(0,1fr);gap:0}.phase-number{padding:26px 0 0;text-align:center;font-size:16px}.phase-body{padding:16px}.phase-body h3{font-size:21px}.phase-body ul{grid-template-columns:1fr}.phase-disclosure[open]>ul{margin-top:16px}
+  .documents-grid>.document-card{flex-basis:86%}.document-card h3{font-size:16px;line-height:1.5}
+  .proj-list.media-rail,.documents-grid.media-rail{scroll-padding-inline:0;overscroll-behavior-x:contain}.proj-panel .pp-body{padding:22px}.proj-panel h3{font-size:22px;line-height:1.3}
+  #cooperation .timeline{grid-template-columns:1fr;gap:0;border:1px solid #eee9df26;border-radius:16px;overflow:hidden}
+  #cooperation .tl-step{display:grid;grid-template-columns:38px minmax(0,1fr);gap:16px;border:0;border-radius:0;border-bottom:1px solid #1b263226;padding:24px 20px}
+  #cooperation .tl-step:last-child{border-bottom:0;grid-column:auto}#cooperation .tl-step .tl-dot{font-size:25px}#cooperation .tl-step .tl-title{font-size:20px;margin-bottom:8px}#cooperation .tl-step p{font-size:15px}
+  .founder-path{flex-direction:row;gap:8px;flex-wrap:wrap}#about[data-founder-style=card] .founder-path span{font-size:12px;padding:8px 12px;min-height:38px;border-radius:8px;border:1px solid var(--border)}
+  #about[data-founder-style=card] .founder-copy{padding:24px}#about .founder-copy .founder-name{font-size:28px}
+  .mobile-bar{background:#1b2632;box-shadow:none;padding:10px 16px calc(10px + env(safe-area-inset-bottom));gap:10px}
+  .mobile-bar a{min-height:48px;border-radius:10px;font-size:14px;padding:12px}
+  body.form-in-view .mobile-bar,body:has(.form-card:focus-within) .mobile-bar{visibility:hidden;pointer-events:none}
+  .lightbox{padding:76px 16px calc(82px + env(safe-area-inset-bottom));gap:14px}.lightbox .lb-nav{top:auto;bottom:20px;transform:none;width:48px;height:48px}.lightbox .lb-prev{left:calc(50% - 60px)}.lightbox .lb-next{right:calc(50% - 60px)}
+}
+@media(max-width:700px){
+  .reference-header,.reference-header.is-scrolled{position:sticky;top:0;z-index:200}.reference-top{flex-wrap:nowrap;gap:8px;min-height:80px;padding:14px 0}.reference-header-inner{padding-inline:16px}.reference-header .logo-mark{gap:6px}.reference-wordmark{font-size:clamp(9px,2.5vw,12px)}.reference-header .logo-mark img{width:32px;height:36px}
+  .reference-actions .theme-switch button{width:36px;height:44px}.reference-actions{margin-left:auto;gap:0}.reference-header .menu-toggle{width:44px;height:44px;margin-left:0;flex:none}
+  .mobile-menu{top:80px;height:calc(100dvh - 80px);padding:20px 24px 36px;overflow-y:auto}.mobile-menu nav a{font-size:20px;min-height:48px;display:flex;align-items:center;padding-block:8px}
+  html{scroll-padding-top:96px}section,.service-detail,.phase,.proj-panel,.document-card{scroll-margin-top:96px}
+  .smart-hero,.smart-hero .hero-slide{min-height:570px}.smart-hero .hero-slide{padding:48px 0 112px}.hero-slide h1,.hero-slide h2,.smart-hero .hero-copy h1{font-size:clamp(29px,8vw,38px);line-height:1.15}.hero-copy .lede{font-size:15px;line-height:1.65}.hero-link{display:inline-flex;align-items:center;min-height:44px}
+  .hero .slider-controls{display:grid;grid-template-columns:44px 1fr 44px 44px;gap:6px}.slide-dots{display:flex;justify-content:center;min-width:0}.slide-dots button{flex:1;max-width:22px;min-width:12px;height:44px;padding:0}
+  .service-ribbon a{font-size:13px;line-height:1.45;padding:16px 12px}
+}
+@media(prefers-reduced-motion:reduce){.btn,.header-tender,.header-callback,.mobile-bar a,.option-chip,.scope-toggle{transition:none}.btn:active,.header-tender:active,.header-callback:active,.mobile-bar a:active,.option-chip:active{transform:none}}
+/* Flexible headings must yield space to the disclosure control. */
+.service-detail-head,.service-detail-head h3,.phase-disclosure summary h3{min-width:0;overflow-wrap:break-word}
+.service-detail-head{flex:1}.phase-disclosure summary h3{flex:1}
+.reference-navigation>a,.reference-navigation summary,.reference-header .nav-phone,.hero-link{min-height:44px;display:flex;align-items:center}
+.slide-dots button{position:relative;width:28px;height:44px;border-radius:0;background:transparent;flex:none}
+.slide-dots button::after{content:"";position:absolute;inset:0;margin:auto;width:8px;height:8px;border-radius:50%;background:#eee9df80}
+.slide-dots button[aria-pressed=true]{background:transparent}.slide-dots button[aria-pressed=true]::after{background:#ffb162}
+.slider-controls>button{width:44px;height:44px}
+@media(max-width:760px){.phase{grid-template-columns:minmax(0,1fr)}.phase-number{display:none}.phase-body{padding:16px 20px}}
+@media(max-width:700px){
+  .hero .slider-controls{grid-template-columns:44px 1fr 44px 44px;row-gap:4px;bottom:12px}
+  .slide-prev{grid-column:1;grid-row:1}.slide-next{grid-column:3;grid-row:1}.slide-pause{grid-column:4;grid-row:1}
+  .slide-dots{grid-column:1/-1;grid-row:2;gap:4px}.slide-dots button{width:32px;max-width:32px;flex:none}
+  .smart-hero .hero-slide{padding-bottom:132px}
+}
+.service-detail summary{padding-right:0}
+.service-detail .scope-toggle,.phase .scope-toggle{position:static}
+.hero-link{width:fit-content}
+@media(max-width:700px){.reference-header .nav-phone{display:none}}
+@media(prefers-reduced-motion:reduce){.mobile-menu,.lightbox{transition:none}}

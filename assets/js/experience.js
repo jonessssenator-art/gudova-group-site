@@ -3,7 +3,7 @@
  const themeButtons=[...document.querySelectorAll('[data-theme]')];
  const applyTheme=theme=>{document.documentElement.dataset.variant=theme;themeButtons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.theme===theme)));};
  applyTheme(document.documentElement.dataset.variant);
- themeButtons.forEach(b=>b.addEventListener('click',()=>{applyTheme(b.dataset.theme);const url=new URL(location.href);url.searchParams.set('variant',b.dataset.theme);history.replaceState(null,'',url);}));
+ themeButtons.forEach(b=>b.addEventListener('click',()=>{applyTheme(b.dataset.theme);try{localStorage.setItem('gudova-theme',b.dataset.theme)}catch{}const url=new URL(location.href);url.searchParams.set('variant',b.dataset.theme);history.replaceState(null,'',url);}));
  document.querySelectorAll('.media-rail').forEach(rail=>{
   const controls=[...document.querySelectorAll('[data-rail="'+rail.id+'"]')],status=document.querySelector('[data-status="'+rail.id+'"]');
   const update=()=>{const max=rail.scrollWidth-rail.clientWidth;controls.forEach(b=>b.disabled=Number(b.dataset.direction)<0?rail.scrollLeft<3:rail.scrollLeft>max-3);const width=rail.firstElementChild.getBoundingClientRect().width+parseFloat(getComputedStyle(rail).gap);status.textContent=String(Math.min(rail.children.length,Math.round(rail.scrollLeft/width)+1)).padStart(2,'0')+' / '+String(rail.children.length).padStart(2,'0')};
