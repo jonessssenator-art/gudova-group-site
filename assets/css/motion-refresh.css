@@ -42,6 +42,6 @@
 .service-detail li{position:relative;border:0;padding:10px 0 10px 20px}
 .service-detail li::before{display:block;content:'•';position:absolute;left:0;top:10px;color:var(--accent)}
 @media(max-width:760px){.service-details-grid{grid-template-columns:1fr;gap:12px}.service-details-grid .service-detail{padding:0 20px}.service-detail summary{min-height:90px;padding:20px 0}}
-/* Uniform photo shade instead of directional gradients. */
-html .smart-hero .hero-slide::after{background:rgba(16,27,38,.48)}
+/* Subtle directional shading for the hero text. */
+html .smart-hero .hero-slide::after{background:linear-gradient(90deg,rgba(16,27,38,.56) 0%,rgba(16,27,38,.46) 55%,rgba(16,27,38,.36) 100%)}
 html .smart-hero .hero-navigation{background:transparent}
