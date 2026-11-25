@@ -22,3 +22,14 @@
 @media(max-width:900px){.service-catalog{display:block}.service-catalog-nav{display:none}.service-catalog .service-details-grid{display:grid;grid-template-columns:1fr;gap:12px}.service-catalog .service-detail{padding:22px}.service-catalog .service-detail h3{font-size:21px}.service-catalog .service-detail li{font-size:16px}.reference-actions .nav-phone{padding:12px}}
 @media(prefers-reduced-motion:reduce){.intro-visual img,.service-catalog-nav button{transition:none!important}}
 .service-catalog .service-detail.reveal-on-scroll{filter:none!important;opacity:1;transform:none;transition:none}
+/* Expandable service panels. Native details remain usable without scripts. */
+.service-details-grid{display:grid;grid-template-columns:1fr;gap:12px;max-width:1160px;margin-inline:auto}
+.service-details-grid .service-detail{border-radius:16px;padding:0 28px;min-height:0;background:var(--card);filter:none!important;opacity:1!important;transform:none!important;transition:border-color 200ms}
+.service-detail summary{min-height:90px;padding:22px 0;margin:0!important}
+.service-detail .service-detail-head>span{display:none}
+.service-detail h3{font-size:25px;line-height:1.3;margin:0}
+.service-detail details>ul{margin:0!important;padding:4px 0 28px;display:grid;grid-template-columns:1fr 1fr;column-gap:38px}
+.service-detail li{font-size:16px;line-height:1.6;padding:12px 0;margin:0;border-top:1px solid var(--border);list-style:none}
+.service-detail li::before{display:none}
+.service-detail details:not([open])>ul{display:none}
+@media(max-width:760px){.service-details-grid .service-detail{padding:0 20px}.service-detail summary{min-height:78px;padding:20px 0}.service-detail h3{font-size:20px}.service-detail details>ul{grid-template-columns:1fr;padding-bottom:20px}}

@@ -1,7 +1,7 @@
 /* Accessible web adaptation of Astra's accordion interaction; native details keep content available without JavaScript. */
 (() => {
   const mobile = matchMedia('(max-width:760px)');
-  const groups = ['.service-detail details', '.phase-disclosure'];
+  const groups = ['.phase-disclosure'];
   const initializeDisclosure = () => groups.forEach(selector => {
     document.querySelectorAll(selector).forEach((item, i) => { item.open = !mobile.matches || (selector.includes("service") && i === 0); });
   });
