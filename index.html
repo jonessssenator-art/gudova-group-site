@@ -49,6 +49,7 @@
 <link rel="stylesheet" href="assets/css/header-reference.css?v=17">
 <link rel="stylesheet" href="assets/css/astra-blocks.css?v=1">
 <link rel="stylesheet" href="assets/css/contact-options.css?v=1"><link rel="stylesheet" href="assets/css/founder-options.css?v=2"><link rel="stylesheet" href="assets/css/refinements.css?v=2"><link rel="stylesheet" href="assets/css/motion-refresh.css?v=4">
+<link rel="stylesheet" href="assets/css/callback.css?v=1">
 </head>
 <body>
 
@@ -64,7 +65,7 @@
 <div class="reference-top">
 <a href="#top" class="logo-mark"><img src="assets/icons/logo-gudova-original.svg?v=1" width="60" height="48" alt=""><span class="reference-wordmark">GUDOVA GROUP</span></a>
 
-<div class="reference-actions"><a class="header-callback" href="#contacts">Обратный звонок</a><a class="nav-phone" href="#contacts">Обсудить проект</a><div class="theme-switch" role="group" aria-label="Цветовая тема"><button type="button" data-theme="light" aria-label="Светлая тема" title="Светлая тема"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 1v3m0 16v3M1 12h3m16 0h3M4.2 4.2l2.1 2.1m11.4 11.4 2.1 2.1M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg></button><button type="button" data-theme="navy" aria-label="Тёмная тема" title="Тёмная тема"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20.6 14.1A9 9 0 0 1 9.9 3.4 9 9 0 1 0 20.6 14.1Z"/></svg></button></div></div>
+<div class="reference-actions"><a class="header-callback" href="#callback-dialog" aria-haspopup="dialog" aria-controls="callback-dialog">Обратный звонок</a><a class="nav-phone" href="#contacts">Обсудить проект</a><div class="theme-switch" role="group" aria-label="Цветовая тема"><button type="button" data-theme="light" aria-label="Светлая тема" title="Светлая тема"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 1v3m0 16v3M1 12h3m16 0h3M4.2 4.2l2.1 2.1m11.4 11.4 2.1 2.1M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg></button><button type="button" data-theme="navy" aria-label="Тёмная тема" title="Тёмная тема"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20.6 14.1A9 9 0 0 1 9.9 3.4 9 9 0 1 0 20.6 14.1Z"/></svg></button></div></div>
 <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Открыть меню"><span></span><span></span><span></span></button>
 </div>
 </div></header>
@@ -72,6 +73,7 @@
 <div class="mobile-menu" id="mobile-menu">
   <nav aria-label="Мобильное меню"><a href="#company">О компании</a><a href="#services">Услуги</a><a href="#process">Стадии проекта</a><a href="#projects">Наши объекты</a><a href="#certificates">Документы</a><a href="#reviews">Нам доверяют</a><a href="#cooperation">Как строится сотрудничество</a><a href="#about">Обо мне</a><a href="#contacts">Контакты</a></nav>
   <div class="mm-contact">
+    <a class="header-callback" href="#callback-dialog" aria-haspopup="dialog" aria-controls="callback-dialog">Обратный звонок</a>
     <a href="tel:+79896650707">+7 (989) 665 07 07</a>
     <a href="mailto:gudova.group@mail.ru">gudova.group@mail.ru</a>
   </div>
@@ -547,5 +549,20 @@
 <script src="assets/js/back-to-top.js?v=1" defer></script>
 <script src="assets/js/refinements.js?v=2" defer></script>
 <script src="assets/js/motion-refresh.js?v=3" defer></script>
+
+<dialog id="callback-dialog" aria-labelledby="callback-title" aria-describedby="callback-description">
+<button type="button" class="callback-close" aria-label="Закрыть форму">×</button>
+<h2 id="callback-title">Заказать обратный звонок</h2>
+<p id="callback-description" class="callback-description">Укажите ваше имя и номер телефона для связи.</p>
+<form id="callback-form">
+<label>Ваше имя<input name="name" autocomplete="name" placeholder="Как к вам обращаться" required maxlength="100"></label>
+<label>Телефон<input name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+7 (999) 123-45-67" required maxlength="25"></label>
+<label>Электронная почта (необязательно)<input name="email" type="email" autocomplete="email" placeholder="name@example.ru" maxlength="254"></label>
+<label class="callback-consent"><input type="checkbox" name="consent" required><span>Я согласен на обработку персональных данных для ответа на обращение.</span></label>
+<button class="callback-submit" type="submit">Передать заявку в WhatsApp</button>
+<p class="callback-hint">Откроется WhatsApp с готовым сообщением. Отправьте его, чтобы мы получили заявку.</p>
+<p role="status" aria-live="polite"></p><a class="callback-retry" hidden target="_blank" rel="noopener noreferrer">Открыть WhatsApp</a>
+</form></dialog>
+<script src="assets/js/callback.js?v=1" defer></script>
 </body>
 </html>
