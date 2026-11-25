@@ -114,3 +114,11 @@ html[data-variant=light] .liquid-preview .mobile-bar{background:#f4f7f9}
 .liquid-preview .mobile-bar a{isolation:isolate;transform:translateZ(0)}
 .liquid-preview .mobile-bar .whatsapp{-webkit-text-fill-color:#172d40!important;color:#172d40!important}
 .liquid-preview.form-in-view .back-to-top,.liquid-preview:has(.form-card:focus-within) .back-to-top{visibility:hidden}
+/* Keep header out of document flow in both scroll states: no hero displacement. */
+.liquid-preview .site-header.reference-header,
+.liquid-preview .site-header.reference-header.is-scrolled{position:absolute;top:46px}
+html.lenis,html.lenis body{scroll-behavior:auto!important}
+@media(max-width:760px){
+ .liquid-preview .site-header.reference-header,
+ .liquid-preview .site-header.reference-header.is-scrolled{position:absolute;top:40px}
+}
