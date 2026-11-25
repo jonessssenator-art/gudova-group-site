@@ -1,0 +1,116 @@
+/* Isolated Liquid Glass concept. Loaded only by liquid-glass.html. */
+html[data-variant]{--surface:transparent;--surface-2:transparent;--card:rgba(40,60,76,.56);--fg:#f2f5f7;--secondary:#d3dce3;--accent:#ffb162;--border:rgba(255,255,255,.24);--glass:rgba(26,43,58,.65);background:#182d3e;color-scheme:dark}
+body.liquid-preview{background:transparent;color:var(--fg)}
+.glass-scene{position:fixed;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(120deg,rgba(14,29,44,.78),rgba(25,49,68,.38)),url('../images/company-construction.png') center/cover no-repeat}
+.liquid-preview section,.liquid-preview .site-footer{background:transparent!important}
+.liquid-preview .reference-header{position:absolute;top:20px;left:3%;width:94%;border-radius:24px;background:linear-gradient(120deg,#ffffff30,#ffffff0b)!important;color:#fff;border:1px solid #ffffff50;box-shadow:inset 0 1px 0 #ffffff70,0 12px 40px #00101c30;-webkit-backdrop-filter:blur(24px) saturate(150%);backdrop-filter:blur(24px) saturate(150%)}
+.liquid-preview .reference-header-inner{padding:0 28px}.liquid-preview .reference-top{min-height:88px;padding:16px 0}.liquid-preview .reference-header .logo-mark img{filter:drop-shadow(0 1px 2px #fff8)}
+.liquid-preview .reference-actions .header-callback{background:linear-gradient(145deg,#ffc080,#ef9b50);color:#172838;border:1px solid #ffd9b0;border-radius:16px;text-transform:none;box-shadow:inset 0 1px 2px #fff9,0 4px 15px #0002}
+.liquid-preview .reference-actions .nav-phone,.liquid-preview .theme-switch{background:#ffffff15;color:#fff;border:1px solid #ffffff40;box-shadow:inset 0 1px 0 #ffffff45;border-radius:16px}
+.liquid-preview .hero-navigation{top:130px;background:none;padding:0 6%}.liquid-preview .hero-navigation .reference-navigation{padding:18px 24px;border-bottom:1px solid #ffffff30}
+.liquid-preview .smart-hero{min-height:820px;margin:0 0 24px;border-radius:0 0 38px 38px;overflow:hidden}
+.liquid-preview .smart-hero .hero-slide{min-height:820px;padding-top:290px;padding-bottom:155px}
+.liquid-preview .smart-hero .hero-photo{filter:brightness(.8);opacity:1}.liquid-preview .hero-slide::after{background:linear-gradient(90deg,#071a2ad9,#132e4950 70%),linear-gradient(0deg,#132d48a0,transparent 60%)!important}
+.liquid-preview .hero-copy{max-width:980px}.liquid-preview .hero-copy h1,.liquid-preview .hero-copy h2{font-size:clamp(38px,4.8vw,68px)!important;line-height:1.13;letter-spacing:-.035em;font-weight:500}
+.liquid-preview .hero .lede{font-size:18px;line-height:1.6;color:#e3e9ee;margin-top:30px}
+.liquid-preview .hero .slider-controls{width:max-content;max-width:calc(100% - 40px);left:6%;margin:0;padding:10px 14px;border-radius:40px;border:1px solid #ffffff50;background:linear-gradient(130deg,#ffffff2a,#ffffff0e);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);box-shadow:inset 0 1px 0 #ffffff60,0 8px 24px #0002;bottom:38px}
+.liquid-preview .service-ribbon{margin:0 3% 32px;border:1px solid #ffffff35;border-radius:20px;background:#ffffff0e;-webkit-backdrop-filter:blur(22px);backdrop-filter:blur(22px);overflow:hidden}
+.liquid-preview .service-ribbon a{background:transparent!important;color:var(--fg)}
+.liquid-preview :is(.service-detail,.phase,.tl-step,.proj-panel,.document-card,.testi-card,.founder-layout,.form-card,.credential-list){background:linear-gradient(135deg,rgba(255,255,255,.16),rgba(56,79,98,.45))!important;border:1px solid rgba(255,255,255,.32)!important;border-radius:24px!important;box-shadow:inset 0 1px 0 #ffffff55,inset 0 -1px 0 #ffffff12,0 12px 32px #07152325;-webkit-backdrop-filter:blur(24px) saturate(125%);backdrop-filter:blur(24px) saturate(125%);color:var(--fg)}
+.liquid-preview :is(.phase-number,.founder-copy,.founder-photo,.pp-body,.credential-list>*,.testi-card>* ){background:transparent!important}
+.liquid-preview .phase{overflow:hidden}.liquid-preview .phase-number{border-right:1px solid var(--border)}
+.liquid-preview .service-detail{border-top-color:#ffffff70!important}.liquid-preview .service-detail summary{min-height:118px}.liquid-preview .service-detail h3{font-size:24px}.liquid-preview .scope-toggle{background:#ffffff0c;border:1px solid #ffffff50;box-shadow:inset 0 1px 0 #ffffff35;color:#ffbb78}
+.liquid-preview :is(h1,h2,h3,h4,.tl-step h3,.pp-title,.testi-card p){color:var(--fg)}
+.liquid-preview :is(.tl-step p,.service-detail li,.phase-body li,.pp-body,.founder-copy p,.credential-list p){color:var(--secondary)}
+.liquid-preview .tl-step{padding:26px}.liquid-preview .tl-step::before{display:none}.liquid-preview .tl-step .num{color:var(--accent)}
+.liquid-preview :is(.intro-visual,.founder-photo img){border-radius:22px!important}.liquid-preview .founder-photo{padding:20px}.liquid-preview .founder-layout{overflow:hidden}
+.liquid-preview :is(input,textarea,select){background:#122b4099!important;color:#fff!important;border:1px solid #ffffff40!important;border-radius:12px!important}.liquid-preview :is(input,textarea)::placeholder{color:#c1cdd6}
+.liquid-preview .final-cta::before,.liquid-preview .final-cta::after{display:none}.liquid-preview .site-footer{border-top:1px solid #ffffff30}
+.liquid-preview :is(.back-to-top,.mobile-bar,.callback-dialog,.mobile-menu){background:#203b50d9;-webkit-backdrop-filter:blur(24px);backdrop-filter:blur(24px);border:1px solid #ffffff40;box-shadow:inset 0 1px 0 #ffffff50,0 10px 30px #0003;color:#fff}
+.liquid-preview .header-services nav{background:#203b50ef!important;-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);border-radius:16px!important}.liquid-preview .header-services nav a{color:#fff!important}
+.liquid-preview :focus-visible{outline:2px solid #ffbd7e;outline-offset:4px}
+html[data-variant=light] .glass-scene{background-image:linear-gradient(120deg,#dbe7edbf,#8aa4b750),url('../images/company-construction.png')}
+html[data-variant=light]{--fg:#142c3e;--secondary:#29475d;--border:#28455b40;--accent:#a34b27;color-scheme:light}
+html[data-variant=light] .liquid-preview :is(.service-detail,.phase,.tl-step,.proj-panel,.document-card,.testi-card,.founder-layout,.form-card,.credential-list){background:linear-gradient(130deg,#ffffffcc,#edf5f77a)!important}
+@media(max-width:760px){
+ .liquid-preview .reference-header{top:12px;left:12px;width:calc(100% - 24px);border-radius:20px}.liquid-preview .reference-header-inner{padding:0 14px}.liquid-preview .reference-top{min-height:64px;padding:10px 0;flex-wrap:nowrap}.liquid-preview .reference-wordmark{font-size:10px}.liquid-preview .reference-header .logo-mark img{width:30px}.liquid-preview .reference-header .menu-toggle span{background:#fff}
+ .liquid-preview .smart-hero{min-height:680px;border-radius:0 0 28px 28px}.liquid-preview .smart-hero .hero-slide{min-height:680px;padding-top:180px;padding-bottom:150px}.liquid-preview .hero-copy h1,.liquid-preview .hero-copy h2{font-size:36px!important;line-height:1.15}.liquid-preview .hero .lede{font-size:15px;display:block;max-width:280px}.liquid-preview .hero .lede-sep{display:none}.liquid-preview .hero .slider-controls{left:20px;padding:5px 8px;bottom:30px;gap:6px}
+ .liquid-preview .service-ribbon{margin:0 20px 20px;border-radius:16px}.liquid-preview .service-detail h3{font-size:20px}.liquid-preview .service-detail summary{min-height:96px}.liquid-preview :is(.service-detail,.phase,.tl-step,.proj-panel,.document-card,.testi-card,.founder-layout,.form-card,.credential-list){border-radius:20px!important;-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+ .liquid-preview .mobile-menu{top:88px;left:12px;right:12px;border-radius:20px}.liquid-preview .mobile-bar{left:10px;right:10px;bottom:10px;width:auto;border-radius:18px;padding:8px;gap:8px}.liquid-preview .mobile-bar a{border-radius:12px}.liquid-preview .back-to-top{bottom:98px}.liquid-preview .phase-number{border-right:0}.liquid-preview .founder-photo{padding:14px}
+}
+@media(max-width:360px){.liquid-preview .reference-wordmark{font-size:9px}.liquid-preview .hero-copy h1,.liquid-preview .hero-copy h2{font-size:32px!important}}
+@media(prefers-reduced-transparency:reduce){.liquid-preview :is(.service-detail,.phase,.form-card,.reference-header){background:#263e50!important;backdrop-filter:none}}
+/* Keep the architectural backdrop quiet behind long text. */
+.glass-scene{filter:blur(7px);transform:scale(1.04);background-image:linear-gradient(120deg,#0e1d2cd9,#193144aa),url('../images/company-construction.png')}
+.liquid-preview :is(.phase,.service-detail,.form-card,.testi-card,.credential-list){background:linear-gradient(130deg,#ffffff20,#192f458c)!important}
+.liquid-preview .hero .lede{display:flex;align-items:center;flex-wrap:wrap;gap:14px}
+@media(max-width:760px){.liquid-preview .hero .lede{display:flex;flex-direction:column;align-items:flex-start;gap:3px}.liquid-preview .hero .slider-controls{display:flex;flex-wrap:nowrap;gap:4px;border-radius:40px}.liquid-preview .slide-dots{order:initial;display:flex;width:auto;gap:0}.liquid-preview .slide-dots button{width:19px}.liquid-preview .slider-controls>button{width:36px;height:36px;flex:0 0 36px}.liquid-preview .hero .slider-controls{max-width:calc(100% - 40px)}}
+
+/* Readable material tokens. Photograph-backed elements keep their own palette. */
+html[data-variant=navy]{--fg:#f6f8fa;--secondary:#dbe4ec;--accent:#ffb162;--glass-panel:rgba(22,43,61,.9);--glass-field:#172d40;--glass-line:#8fa5b866;--glass-muted:#d1dce6;--glass-link:#ffba78}
+html[data-variant=light]{--fg:#162d3f;--secondary:#304b60;--accent:#9b451b;--glass-panel:rgba(246,249,250,.94);--glass-field:#fff;--glass-line:#526b8055;--glass-muted:#3b566b;--glass-link:#904015}
+html[data-variant=light] .glass-scene{background-image:linear-gradient(120deg,#eef3f5f2,#e6eef1e8),url('../images/company-construction.png')}
+html[data-variant=navy] .glass-scene{background-image:linear-gradient(120deg,#0d2033ed,#1c354bd9),url('../images/company-construction.png')}
+html[data-variant] .liquid-preview :is(.service-detail,.phase,.tl-step,.proj-panel,.document-card,.testi-card,.founder-layout,.form-card,.credential-list,.service-ribbon){background:linear-gradient(135deg,#ffffff0d,transparent 60%),var(--glass-panel)!important;border-color:var(--glass-line)!important}
+html[data-variant] .liquid-preview :is(h1,h2,h3,h4,h5,h6,.tl-title,.pp-title,.testi-who b,.founder-path span,.contact-statement,.cta-fallback a,.option-chip,.form-success h3){color:var(--fg)}
+html[data-variant] .liquid-preview :is(.tl-step p,.testi-card p,.testi-who span,.phase-body li,.service-detail li,.founder-copy p,.founder-quote,.founder-quote p,.credential-list p,.proj-summary p,.pp-body,.pp-meta,.pp-meta dt,.pp-meta dd,.field-group label,.form-card p,.form-card label,.site-footer,.footer-bottom,.footer-brand p,.footer-tagline,.rail-label){color:var(--secondary)}
+html[data-variant] .liquid-preview :is(.hero-copy h1,.hero-copy h2,.hero-copy h1 span,.hero-copy h2 span){color:#fff!important;text-shadow:0 2px 16px #07152255}
+html[data-variant] .liquid-preview .hero-copy .lede{color:#f0f5f9}
+html[data-variant] .liquid-preview .hero-slide::after{background:linear-gradient(90deg,rgba(5,20,34,.88),rgba(6,23,38,.66) 65%,rgba(8,25,41,.4)),linear-gradient(0deg,#132d48a0,transparent 60%)!important}
+html[data-variant] .liquid-preview .reference-header{background:linear-gradient(120deg,#ffffff1c,#ffffff08),rgba(18,37,54,.88)!important}
+html[data-variant] .liquid-preview :is(.reference-header,.hero-navigation,.slider-controls){--fg:#fff;--secondary:#e1eaf0;--accent:#ffb162;--border:#ffffff60;color:#fff}
+html[data-variant] .liquid-preview .theme-switch button{color:#fff}html[data-variant] .liquid-preview .theme-switch button[aria-pressed=true]{color:#172d40;background:#ffb162}
+html[data-variant] .liquid-preview .service-ribbon a{color:var(--fg)}
+html[data-variant] .liquid-preview :is(.phase-number,.tl-dot,.service-detail-head>span,.pp-category,.experience-label,.founder-cred a,.cta-fallback svg){color:var(--glass-link)}
+html[data-variant] .liquid-preview .service-detail{border-top-color:#ff983f99!important}
+html[data-variant] .liquid-preview .scope-toggle{color:var(--glass-link);border-color:var(--glass-line)}
+html[data-variant] .liquid-preview .scope-toggle::before,html[data-variant] .liquid-preview .scope-toggle::after{background:currentColor}
+html[data-variant] .liquid-preview .founder-path span{border-color:var(--glass-line);background:transparent}
+html[data-variant] .liquid-preview .founder-path span:last-child{background:#ffb162;color:#172d40;border-color:#ffb162}
+html[data-variant] .liquid-preview :is(.fp-tag,.pp-count,.intro-visual figcaption){color:#fff;background:#142b40ed}
+html[data-variant] .liquid-preview :is(.form-card input,.form-card textarea,.form-card select,#callback-dialog input){color:var(--fg)!important;background:var(--glass-field)!important;border-color:var(--glass-line)!important;caret-color:var(--fg)}
+html[data-variant] .liquid-preview :is(input,textarea)::placeholder{color:var(--glass-muted)!important;opacity:1}
+html[data-variant] .liquid-preview .option-chip{background:var(--glass-field);color:var(--fg);border-color:var(--glass-line)}
+html[data-variant] .liquid-preview .option-chip[aria-pressed=true]{background:#ffb162;color:#172d40;border-color:#c77428}
+html[data-variant] .liquid-preview :is(.callback-submit,.btn-primary){background:#ffad61;color:#172d40;border:1px solid #d4833c}
+html[data-variant] .liquid-preview :is(.btn-outline-dark,.form-back){color:var(--fg);border-color:var(--glass-line);background:var(--glass-field)}
+html[data-variant] .liquid-preview .form-progress span{background:var(--glass-line)}
+html[data-variant] .liquid-preview .form-progress span::after{background:#ff983f}
+html[data-variant] .liquid-preview #callback-dialog{background:var(--glass-panel);color:var(--fg);border-color:var(--glass-line);-webkit-backdrop-filter:blur(24px);backdrop-filter:blur(24px)}
+html[data-variant] .liquid-preview #callback-dialog :is(p,label){color:var(--secondary)}
+html[data-variant] .liquid-preview :is(.field-error,.form-error){color:var(--glass-link);font-weight:600}
+html[data-variant] .liquid-preview .site-footer :is(a,h6){color:var(--fg)}
+html[data-variant] .liquid-preview :is(.mobile-menu,.back-to-top,.mobile-bar){background:var(--glass-panel);color:var(--fg);border-color:var(--glass-line)}
+html[data-variant] .liquid-preview :is(.mobile-menu a,.mobile-bar .call){color:var(--fg)}
+html[data-variant] .liquid-preview .mobile-bar .whatsapp{color:#172d40;background:#ffb162}
+html[data-variant] .liquid-preview .rail-controls button{background:var(--glass-panel);color:var(--fg);border-color:var(--glass-line)}
+html[data-variant] .liquid-preview .header-services nav a:hover{background:#ffffff20}
+html[data-variant] .liquid-preview ::selection{background:#ffb162;color:#142b40}
+.glass-test-notice{position:absolute;top:0;left:0;right:0;z-index:101;min-height:28px;display:flex;align-items:center;justify-content:center;gap:12px;padding:4px 16px;background:#172c40;color:#ffe0c0;font:500 12px/1.5 var(--font-sans);border-bottom:1px solid #ff983f66}
+.glass-test-notice a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+.liquid-preview .reference-header{top:46px}.liquid-preview .hero-navigation{top:154px}
+@media(max-width:760px){.glass-test-notice{font-size:10px;gap:8px}.liquid-preview .reference-header{top:40px}.liquid-preview .mobile-menu{top:116px}}
+@media(prefers-reduced-transparency:reduce){html[data-variant] .liquid-preview :is(.service-detail,.phase,.form-card){background:var(--glass-panel)!important;backdrop-filter:none}}
+/* Override legacy section-specific palettes as well as shared selectors. */
+.liquid-preview #cooperation .tl-title,.liquid-preview #contacts :is(h2,h3,.option-chip,.cta-fallback a){color:var(--fg)!important}
+.liquid-preview #cooperation .tl-step p,.liquid-preview #contacts :is(p,label,.step-hint,.form-consent){color:var(--secondary)!important}
+.liquid-preview #cooperation .tl-dot,.liquid-preview #contacts .cta-fallback svg{color:var(--glass-link)!important}
+.liquid-preview #contacts .option-chip[aria-pressed=true]{color:#172d40!important;background:#ffb162!important}
+.liquid-preview #contacts .btn-ghost{color:var(--fg);border:1px solid var(--glass-line)}
+.liquid-preview .footer-bottom,.liquid-preview .footer-bottom a,.liquid-preview .footer-col a{color:var(--secondary)!important;opacity:1}
+.liquid-preview .media-toolbar button{background:var(--glass-panel);color:var(--fg)}
+.liquid-preview .footer-col>span{color:var(--secondary)!important}
+html[data-variant=navy] .liquid-preview #callback-dialog{background:#1b3042}
+html[data-variant=light] .liquid-preview #callback-dialog{background:#f4f7f9}
+html[data-variant] .liquid-preview #callback-dialog{-webkit-backdrop-filter:none;backdrop-filter:none}
+html[data-variant] .liquid-preview .mobile-bar{-webkit-backdrop-filter:none;backdrop-filter:none}
+html[data-variant=navy] .liquid-preview .mobile-bar{background:#1b3042}
+html[data-variant=light] .liquid-preview .mobile-bar{background:#f4f7f9}
+.liquid-preview .lightbox .lb-caption,.liquid-preview .lightbox .lb-counter{color:#f0f5f9;background:#142a3ee8;padding:8px 12px}
+@media(max-width:760px){.liquid-preview #cooperation .timeline{gap:12px}}
+.liquid-preview #contacts .btn-outline-dark{color:var(--fg)!important;border-color:var(--glass-line)!important;background:var(--glass-field)!important}
+.liquid-preview #contacts .option-chip{border-color:var(--glass-line)!important;background:var(--glass-field)!important}
+.liquid-preview #contacts .option-chip[aria-pressed=true]{background:#ffb162!important}
+.liquid-preview .mobile-bar a{isolation:isolate;transform:translateZ(0)}
+.liquid-preview .mobile-bar .whatsapp{-webkit-text-fill-color:#172d40!important;color:#172d40!important}
+.liquid-preview.form-in-view .back-to-top,.liquid-preview:has(.form-card:focus-within) .back-to-top{visibility:hidden}
