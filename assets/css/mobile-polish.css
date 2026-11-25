@@ -50,3 +50,11 @@
  .mobile-bar a{font-size:14px;min-height:48px}
 }
 @media(max-width:360px){.section-head h2{font-size:26px}.service-detail h3{font-size:18px}.service-detail-head{gap:8px}.service-details-grid .service-detail{padding-inline:14px}}
+/* Quiet, consistent controls across all sections. */
+.service-detail details[open] .scope-toggle,.phase details[open] .scope-toggle{transform:none}
+.service-detail details[open] .scope-toggle::after,.phase details[open] .scope-toggle::after{opacity:0}
+.scope-toggle::after{transition:opacity 150ms}
+.proj-panel .pp-count::before{display:none}
+.proj-panel .pp-count{border-radius:8px!important}
+.intro-visual>span{justify-content:flex-start}
+@media(prefers-reduced-motion:reduce){.scope-toggle::after{transition:none}}
