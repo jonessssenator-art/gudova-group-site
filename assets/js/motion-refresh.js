@@ -15,7 +15,7 @@
  if(!reduce.matches&&'IntersectionObserver' in window){
   const observer=new IntersectionObserver(entries=>entries.forEach(({target,isIntersecting})=>{if(!isIntersecting)return;observer.unobserve(target);if(target.matches('h1,.section-head h2')){
    const text=target.textContent;target.setAttribute('aria-label',text);target.textContent='';let n=0;
-   text.split(/(\s+)/).forEach(word=>{if(/^\s+$/.test(word)){target.append(document.createTextNode(word));return;}const group=document.createElement('span');group.className='reveal-word';group.setAttribute('aria-hidden','true');for(const letter of word){const ch=document.createElement('span');ch.textContent=letter;group.append(ch);animate(ch,Math.min(n++*12,600));}target.append(group);});
+   text.split(/(\s+|(?<=-))/).forEach(word=>{if(/^\s+$/.test(word)){target.append(document.createTextNode(word));return;}const group=document.createElement('span');group.className='reveal-word';group.setAttribute('aria-hidden','true');for(const letter of word){const ch=document.createElement('span');ch.textContent=letter;group.append(ch);animate(ch,Math.min(n++*12,600));}target.append(group);});
   }else animate(target);}),{threshold:.12});
   document.querySelectorAll('h1,.section-head h2,.intro-visual,.founder-photo,.tl-step,.credential-list').forEach(el=>observer.observe(el));
  }
