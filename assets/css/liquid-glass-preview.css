@@ -86,10 +86,7 @@ html[data-variant] .liquid-preview .mobile-bar .whatsapp{color:#172d40;backgroun
 html[data-variant] .liquid-preview .rail-controls button{background:var(--glass-panel);color:var(--fg);border-color:var(--glass-line)}
 html[data-variant] .liquid-preview .header-services nav a:hover{background:#ffffff20}
 html[data-variant] .liquid-preview ::selection{background:#ffb162;color:#142b40}
-.glass-test-notice{position:absolute;top:0;left:0;right:0;z-index:101;min-height:28px;display:flex;align-items:center;justify-content:center;gap:12px;padding:4px 16px;background:#172c40;color:#ffe0c0;font:500 12px/1.5 var(--font-sans);border-bottom:1px solid #ff983f66}
-.glass-test-notice a{color:#fff;text-decoration:underline;text-underline-offset:3px}
-.liquid-preview .reference-header{top:46px}.liquid-preview .hero-navigation{top:154px}
-@media(max-width:760px){.glass-test-notice{font-size:10px;gap:8px}.liquid-preview .reference-header{top:40px}.liquid-preview .mobile-menu{top:116px}}
+.liquid-preview .reference-header{top:20px}.liquid-preview .hero-navigation{top:130px}
 @media(prefers-reduced-transparency:reduce){html[data-variant] .liquid-preview :is(.service-detail,.phase,.form-card){background:var(--glass-panel)!important;backdrop-filter:none}}
 /* Override legacy section-specific palettes as well as shared selectors. */
 .liquid-preview #cooperation .tl-title,.liquid-preview #contacts :is(h2,h3,.option-chip,.cta-fallback a){color:var(--fg)!important}
@@ -116,9 +113,9 @@ html[data-variant=light] .liquid-preview .mobile-bar{background:#f4f7f9}
 .liquid-preview.form-in-view .back-to-top,.liquid-preview:has(.form-card:focus-within) .back-to-top{visibility:hidden}
 /* Keep header out of document flow in both scroll states: no hero displacement. */
 .liquid-preview .site-header.reference-header,
-.liquid-preview .site-header.reference-header.is-scrolled{position:absolute;top:46px}
+.liquid-preview .site-header.reference-header.is-scrolled{position:absolute;top:20px}
 html.lenis,html.lenis body{scroll-behavior:auto!important}
 @media(max-width:760px){
  .liquid-preview .site-header.reference-header,
- .liquid-preview .site-header.reference-header.is-scrolled{position:absolute;top:40px}
+ .liquid-preview .site-header.reference-header.is-scrolled{position:absolute;top:12px}
 }
