@@ -1,0 +1,24 @@
+:root{--motion-ease:cubic-bezier(.23,1,.32,1)}
+.reveal-word{display:inline-block;white-space:nowrap}.reveal-word>span{display:inline-block}
+.service-catalog{display:grid;grid-template-columns:minmax(240px,.8fr) minmax(0,1.6fr);gap:32px;align-items:start}
+.service-catalog-nav{display:flex;flex-direction:column;gap:7px;position:sticky;top:110px}
+.service-catalog-nav button{font:inherit;font-size:17px;line-height:1.4;text-align:left;padding:18px 20px;border:1px solid transparent;background:transparent;color:var(--fg);border-radius:12px;cursor:pointer;transition:background 220ms,color 220ms,border-color 220ms}
+.service-catalog-nav button[aria-selected=true]{background:var(--card);border-color:var(--border);box-shadow:inset 3px 0 #c5744e}
+.service-catalog .service-details-grid{display:block;min-width:0}
+.service-catalog .service-detail{border-radius:18px;padding:32px;background:var(--card);min-height:0}
+.service-catalog .service-detail[hidden]{display:none!important}
+.service-catalog .service-detail h3{font-size:28px;line-height:1.25}
+.service-catalog .service-detail li{font-size:17px;line-height:1.6;padding:12px 0;border-bottom:1px solid var(--border);margin:0;list-style:none}
+.service-catalog .service-detail li:last-child{border-bottom:0}
+.service-catalog .service-detail li::before{display:none}
+.service-catalog .service-detail ul{padding:0;margin-top:24px}
+.service-catalog .service-detail-head>span{display:none}
+.reference-actions .header-callback,.reference-actions .nav-phone{border-radius:12px;padding:14px 20px;font-size:14px;white-space:nowrap}
+.reference-actions .nav-phone{background:var(--card);border:1px solid var(--border);color:var(--fg)}
+.intro-visual,.proj-panel,.document-card,.testi-card{border-radius:18px!important;overflow:hidden}
+.btn{border-radius:12px!important}
+@media(min-width:901px){.service-catalog .scope-toggle{display:none}.service-catalog summary{pointer-events:none}.service-catalog .service-detail{min-height:620px}}
+@media(hover:hover) and (pointer:fine){.service-catalog-nav button:hover{background:var(--card);border-color:var(--border)}.intro-visual img{transition:transform 650ms var(--motion-ease)}.intro-visual:hover img{transform:scale(1.035)}}
+@media(max-width:900px){.service-catalog{display:block}.service-catalog-nav{display:none}.service-catalog .service-details-grid{display:grid;grid-template-columns:1fr;gap:12px}.service-catalog .service-detail{padding:22px}.service-catalog .service-detail h3{font-size:21px}.service-catalog .service-detail li{font-size:16px}.reference-actions .nav-phone{padding:12px}}
+@media(prefers-reduced-motion:reduce){.intro-visual img,.service-catalog-nav button{transition:none!important}}
+.service-catalog .service-detail.reveal-on-scroll{filter:none!important;opacity:1;transform:none;transition:none}
